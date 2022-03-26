@@ -16,7 +16,7 @@ The following **required** functionality is completed:
 
 The following **bonus** features are implemented:
 
-- [ ] User can pull to refresh. (1pt)
+- [x] User can pull to refresh. (1pt)
 - [ ] User can load past posts infinitely. (2pts)
 
 ## Video Walkthrough
@@ -36,3 +36,5 @@ Here's a walkthrough of implemented user stories:
 <img src='http://i.imgur.com/D8nJB7J.png' title='the posted feed' width='500' alt='the posted feed' />
 
 <img src='http://i.imgur.com/cw1ErL1.png' title='view 20 posted feeds' width='500' alt='view 20 posted feeds' />
+
+<img src='http://i.imgur.com/69WfGja.png' title='pull to refresh' width='500' alt='pull to refresh' />

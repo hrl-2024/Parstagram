@@ -11,6 +11,9 @@ import AlamofireImage
 
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    // variables:
+    var refreshControl: UIRefreshControl!
+    
     // Outlets:
     @IBOutlet weak var tableView: UITableView!
     
@@ -22,6 +25,12 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
+        
+        // for the refreshor:
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(onRefresh), for: .valueChanged)
+        tableView.insertSubview(refreshControl, at: 0)
+        tableView.refreshControl = refreshControl
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -64,15 +73,17 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // for the refresher
+    @objc func onRefresh() {
+        run(after: 2) {
+            self.refreshControl.endRefreshing()
+        }
     }
-    */
+
+    // implement the delay method
+    func run(after wait: TimeInterval, closure: @escaping () -> Void) {
+        let queue = DispatchQueue.main
+        queue.asyncAfter(deadline: DispatchTime.now() + wait, execute: closure)
+    }
 
 }
