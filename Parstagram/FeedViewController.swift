@@ -18,6 +18,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableView: UITableView!
     
     var posts = [PFObject]()
+    var numberOfFeeds : Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +40,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         // get the query
         let query = PFQuery(className:"Posts")
         query.includeKey("author")
-        query.limit = 20
+        self.numberOfFeeds = 20
+        query.limit = numberOfFeeds
         
         // upon getting the movie back, put them into the array
         // And then reload the tableview cell data
@@ -56,7 +58,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
         let post = posts[indexPath.row]
         
@@ -75,8 +76,24 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     // for the refresher
     @objc func onRefresh() {
-        run(after: 2) {
+        run(after: 1) {
             self.refreshControl.endRefreshing()
+        }
+        
+        numberOfFeeds += 20
+        
+        // get the query
+        let query = PFQuery(className:"Posts")
+        query.includeKey("author")
+        query.limit = numberOfFeeds
+        
+        // upon getting the movie back, put them into the array
+        // And then reload the tableview cell data
+        query.findObjectsInBackground { (posts, error) in
+            if posts != nil {
+                self.posts = posts!
+                self.tableView.reloadData()
+            }
         }
     }
 
