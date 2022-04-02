@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E502A1027F7E9BA00018CC8 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E502A0F27F7E9BA00018CC8 /* CommentCell.swift */; };
 		0E866FEA27EE76B20098E11E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E866FE927EE76B20098E11E /* LoginViewController.swift */; };
 		0E866FEC27EE76CE0098E11E /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E866FEB27EE76CE0098E11E /* FeedViewController.swift */; };
 		0E866FEF27EEC3AA0098E11E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E866FEE27EEC3AA0098E11E /* CameraViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E502A0F27F7E9BA00018CC8 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		0E866FE927EE76B20098E11E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0E866FEB27EE76CE0098E11E /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		0E866FEE27EEC3AA0098E11E /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				0EB3C56D27EE6EC900545AA3 /* Assets.xcassets */,
 				0EB3C56F27EE6EC900545AA3 /* LaunchScreen.storyboard */,
 				0EB3C57227EE6EC900545AA3 /* Info.plist */,
+				0E502A0F27F7E9BA00018CC8 /* CommentCell.swift */,
 			);
 			path = Parstagram;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				0E866FEC27EE76CE0098E11E /* FeedViewController.swift in Sources */,
 				0EB3C56727EE6EC700545AA3 /* SceneDelegate.swift in Sources */,
 				0E866FF127EED0E60098E11E /* PostCell.swift in Sources */,
+				0E502A1027F7E9BA00018CC8 /* CommentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
