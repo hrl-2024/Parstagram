@@ -24,6 +24,8 @@ Here's a walkthrough of implemented user stories:
 
 <img src='http://i.imgur.com/D7nU7UT.gif' title='Stayed logged in' width='500' alt='Stayed logged in' /> <br>
 
+<img src='http://i.imgur.com/iKwmvp4.gif' title='Stayed logged in' width='500' alt='Stayed logged in' /> <br>
+
 <img src='http://i.imgur.com/bhOjoQg.gif' title='can log out' width='500' alt='can log out' /> <br>
 
 <img src='http://i.imgur.com/QUIuVGr.png' title='view comment' width='500' alt='view comment' /> <br>
